@@ -1,5 +1,8 @@
-import { ReactProvider } from "./ReactProvider";
+// RootLayout.tsx
+import React from "react";
+import { ReactProvider } from "./ReactProvider"; // Path to your ReactProvider component
 import "./globals.css";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"; 
 
 export const metadata = {
   title: "Create Next App",
@@ -16,6 +19,7 @@ export default function RootLayout({
       <html lang="en">
         <body>{children}</body>
       </html>
+      <ReactQueryDevtools  />
     </ReactProvider>
   );
 }
